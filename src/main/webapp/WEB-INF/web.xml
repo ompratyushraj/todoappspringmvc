@@ -15,5 +15,9 @@
 		<servlet-name>todo</servlet-name>
 		<url-pattern>/</url-pattern>  <!-- This maps to the root path -->
 	</servlet-mapping>
+	
+	<listener>
+		<listener-class>listener.Listener</listener-class>
+	</listener>
 
 </web-app>
