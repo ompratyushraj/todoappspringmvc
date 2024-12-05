@@ -33,6 +33,14 @@
         </div>
         <div class="col-md-10">
           <c:if test="${page=='home' }"><h1 class="text-center">All Todos</h1>
+            <c:forEach items="${todos }" var="todo">
+              <div class="card">
+                <div class="card-body">
+                  <h3><c:out value="${todo.todoTitle }"></c:out></h3>
+                  <p><c:out value="${todo.todoContent }"></c:out></p>
+                </div>
+              </div>
+            </c:forEach>
           </c:if>
           <c:if test="${page=='add' }"><h1 class="text-center">Add Todo</h1>
           <br>

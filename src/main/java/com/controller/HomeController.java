@@ -23,6 +23,8 @@ public class HomeController {
 	@RequestMapping("/home")
 	public String home(Model model){
 		model.addAttribute("page", "home");
+		List<Todo> list=(List<Todo>)context.getAttribute("list");
+		model.addAttribute("todos", list);
 		return "home";  // This refers to home.jsp
 	}
 	
