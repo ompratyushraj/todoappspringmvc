@@ -15,6 +15,11 @@
     <h1 class="text-center mt-4">ToDo App</h1>
     <div class="container mt-3">
       <h1 class="text-center" >- Welcome to ToDo Manager -</h1>
+      <c:if test="${not empty  message }">
+      	<div class="alert alert-success">
+      		<b><c:out value="${message }"></c:out></b>
+      </div>
+      </c:if>
       <div class="row mt-5">
         <div class="col-md-2">
           <h3>Options</h3>
